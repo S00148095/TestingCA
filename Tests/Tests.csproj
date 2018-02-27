@@ -54,6 +54,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TestingCAWebApp\TestingCAWebApp.csproj">
+      <Project>{02102233-e761-47ed-a9e9-8b0f2df8cdbc}</Project>
+      <Name>TestingCAWebApp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TestingCA\TestingCA.csproj">
       <Project>{E260BC5F-E87F-4BC3-BE7F-2109732EEA5F}</Project>
       <Name>TestingCA</Name>

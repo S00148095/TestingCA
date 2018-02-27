@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using TestingCA;
+using TestingCAWebApp.Controllers;
 
 namespace Tests
 {
@@ -9,7 +10,7 @@ namespace Tests
         [Test]
         public void FemaleBetween18And30()
         {
-            var sut = new Code();
+            var sut = new Calc();
 
             var result = sut.CalcPremium(19, "female");
 
@@ -19,7 +20,7 @@ namespace Tests
         [Test]
         public void FemaleOver30()
         {
-            var sut = new Code();
+            var sut = new Calc();
 
             var result = sut.CalcPremium(31, "female");
 
@@ -29,7 +30,7 @@ namespace Tests
         [Test]
         public void MaleBetween18And35()
         {
-            var sut = new Code();
+            var sut = new Calc();
 
             var result = sut.CalcPremium(19, "male");
 
@@ -39,7 +40,7 @@ namespace Tests
         [Test]
         public void MaleOver35()
         {
-            var sut = new Code();
+            var sut = new Calc();
 
             var result = sut.CalcPremium(36, "male");
 
@@ -49,7 +50,7 @@ namespace Tests
         [Test]
         public void MaleOver50()
         {
-            var sut = new Code();
+            var sut = new Calc();
 
             var result = sut.CalcPremium(51, "male");
 
@@ -58,7 +59,7 @@ namespace Tests
         [Test]
         public void FemaleOver50()
         {
-            var sut = new Code();
+            var sut = new Calc();
 
             var result = sut.CalcPremium(51, "female");
 
@@ -68,7 +69,7 @@ namespace Tests
         [Test]
         public void MaleUnder18()
         {
-            var sut = new Code();
+            var sut = new Calc();
 
             var result = sut.CalcPremium(17, "male");
 
@@ -78,7 +79,7 @@ namespace Tests
         [Test]
         public void FemaleUnder18()
         {
-            var sut = new Code();
+            var sut = new Calc();
 
             var result = sut.CalcPremium(17, "female");
 
@@ -88,7 +89,7 @@ namespace Tests
         [Test]
         public void OtherGender()
         {
-            var sut = new Code();
+            var sut = new Calc();
 
             var result = sut.CalcPremium(18, "other");
 
