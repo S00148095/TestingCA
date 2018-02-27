@@ -30,7 +30,8 @@ namespace TestingCAWebApp.Controllers
         [HttpPost]
         public ActionResult InputForm(string gender, int age)
         {
-            CalcPremium(age,gender);
+            ViewBag.Message = CalcPremium(age,gender);
+
             return View();
         }
 
