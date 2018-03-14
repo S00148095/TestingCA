@@ -1,0 +1,18 @@
+---
+Test
+---
+!contents -R2 -g -p -f -h
+!define TEST_RUNNER {C:\Users\liaml\Downloads\Testing_2018\Testing_2018\fitnesse\dotnet2\Runner.exe}
+!define COMMAND_PATTERN {%m -r fitnesse.fitserver.FitServer %p}
+!path C:\Users\liaml\Documents\Visual Studio 2017\Projects\ProjectMgnt\TestingCA\bin\Debug\TestingCA.dll
+!|Code|
+|gender|age|CalcPremium?|
+|female|17|0|
+|female|20|5|
+|female|31|2.5|
+|female|50|0.15|
+|male|17|0|
+|male|20|5|
+|male|31|2.5|
+|male|50|0.15|
+|p|20|0|
