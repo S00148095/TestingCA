@@ -1,4 +1,6 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using TestingCA;
 using TestingCAWebApp.Controllers;
 
@@ -7,6 +9,65 @@ namespace Tests
     [TestFixture]
     public class Tests
     {
+        IWebDriver drive;
+
+        [SetUp]
+        public void Init()
+        {
+            drive = new ChromeDriver();
+        }
+
+        [Test]
+        public void ChromeTest1()
+        {
+            drive.Navigate().GoToUrl("http://localhost:50019/");
+            drive.FindElement(By.Id("gender")).SendKeys("female");
+            drive.FindElement(By.Id("age")).SendKeys("17");
+            drive.FindElement(By.Id("submit")).SendKeys(Keys.Enter);
+        }
+
+        [Test]
+        public void ChromeTest2()
+        {
+            drive.Navigate().GoToUrl("http://localhost:50019/");
+            drive.FindElement(By.Id("gender")).SendKeys("female");
+            drive.FindElement(By.Id("age")).SendKeys("20");
+            drive.FindElement(By.Id("submit")).SendKeys(Keys.Enter);
+        }
+
+        [Test]
+        public void ChromeTest3()
+        {
+            drive.Navigate().GoToUrl("http://localhost:50019/");
+            drive.FindElement(By.Id("gender")).SendKeys("female");
+            drive.FindElement(By.Id("age")).SendKeys("31");
+            drive.FindElement(By.Id("submit")).SendKeys(Keys.Enter);
+        }
+
+        [Test]
+        public void ChromeTest4()
+        {
+            drive.Navigate().GoToUrl("http://localhost:50019/");
+            drive.FindElement(By.Id("gender")).SendKeys("male");
+            drive.FindElement(By.Id("age")).SendKeys("17");
+            drive.FindElement(By.Id("submit")).SendKeys(Keys.Enter);
+        }
+
+        [Test]
+        public void ChromeTest5()
+        {
+            drive.Navigate().GoToUrl("http://localhost:50019/");
+            drive.FindElement(By.Id("gender")).SendKeys("male");
+            drive.FindElement(By.Id("age")).SendKeys("17");
+            drive.FindElement(By.Id("submit")).SendKeys(Keys.Enter);
+        }
+
+        [TearDown]
+        public void CloseBrowser()
+        {
+            drive.Close();
+        }
+
         [Test]
         public void FemaleBetween18And30()
         {
