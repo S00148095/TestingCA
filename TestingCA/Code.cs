@@ -13,16 +13,16 @@ namespace TestingCA
                 else if (age >= 31)
                     premium = (float)2.50;
                 else
-                    premium = (float)0.0;
+                    premium = (float)0.0; //Fail
             else if (gender == "male")
                 if ((age >= 18) && (age <= 35))
                     premium = (float)6.0;
                 else if (age >= 36)
                     premium = (float)5.0;
                 else
-                    premium = (float)0.0;
+                    premium = (float)0.0; //Fail
             else
-                premium = (float)0.0;
+                premium = (float)0.0; //Fail
 
             if (age >= 50)
                 premium = premium * (float)0.15;
