@@ -1,8 +1,13 @@
 ﻿
+using fit;
+
 namespace TestingCA
 {
-    public class Code
+    public class Code : ColumnFixture
     {
+        public int age;
+        public string gender;
+
         public float CalcPremium(int age, string gender)
         {
             float premium;
